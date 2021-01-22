@@ -1,2 +1,2 @@
 # Dijkstra
-![Shortest distance from A to F](https://ibb.co/v1JvXNX)
+![Shortest distance from A to F](https://github.com/ennemli/Dijkstra/blob/alwaysLearning/map.png)
