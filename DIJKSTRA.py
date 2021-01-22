@@ -22,23 +22,20 @@ city.connect("C", "F", 2)
 def dijkstra(graph: Graph, f, t):
     mins = {f: 0}
     q = [(0, Node(f))]
-    seen=set()
     while q:
         cost, v1 = heappop(q)
         if v1.val == t:
             return v1
-        if v1.val not in seen:
-            seen.add(v1.val)
         for v2 in graph.edges[v1.val]:
             prev = mins.get(v2, float('inf'))
             next = cost + graph.edges[v1.val][v2]
-            if next < prev and v2 not in seen:
+            if next < prev:
                 mins[v2] = next
                 v2 = Node(v2)
                 v2.parent = v1
                 heappush(q, (next, v2))
 
-    return float("inf")
+    return 'inf'
 
 
 if __name__ == "__main__":
